@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Course</title>
+	<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Qaz Digital</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/flexslider.css') }}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/pricing.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static',filename='js/modernizr-2.6.2.min.js') }}"></script>
+	<style>
+		.animated-button {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			padding: 13px 30px;
+			border: 4px solid;
+			border-color: transparent;
+			font-size: 12px;
+			border-radius: 100px;
+			font-weight: 600;
+			color: rgba(0, 0, 0, 0.9);
+			box-shadow: 0 0 0 2px #ffffff;
+			cursor: pointer;
+			overflow: hidden;
+			transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+			margin: 6px 0 6px 10px;
+		}
+
+		.animated-button svg {
+			position: absolute;
+			width: 24px;
+			fill: rgba(0, 0, 0, 0.9);
+			z-index: 9;
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button .arr-1 {
+			right: 16px;
+		}
+
+		.animated-button .arr-2 {
+			left: -25%;
+		}
+
+		.animated-button .circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 20px;
+			background-color: #c5e5e4;
+			border-radius: 50%;
+			opacity: 0;
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button .text {
+			position: relative;
+			z-index: 1;
+			transform: translateX(-12px);
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button:hover {
+			box-shadow: 0 0 0 12px transparent;
+			color: rgba(0, 0, 0, 0.9);
+			border-radius: 12px;
+		}
+
+		.animated-button:hover .arr-1 {
+			right: -25%;
+		}
+
+		.animated-button:hover .arr-2 {
+			left: 16px;
+		}
+
+		.animated-button:hover .text {
+			transform: translateX(12px);
+		}
+
+		.animated-button:hover svg {
+			fill: rgba(0, 0, 0, 0.9);
+		}
+
+		.animated-button:active {
+			scale: 0.95;
+			box-shadow: 0 0 0 4px greenyellow;
+		}
+
+		.animated-button:hover .circle {
+			width: 220px;
+			height: 220px;
+			opacity: 1;
+		}
+		.col-xs-12.text-right {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 10px; /* Расстояние между элементами */
+		}
+
+		.fh5co-social {
+			display: flex;
+			gap: 10px; /* Расстояние между иконками */
+			margin: 0; /* Уберите возможные отступы */
+			padding: 0;
+		}
+
+		.fh5co-social li {
+			list-style: none; /* Уберите маркеры списка */
+		}
+
+	</style>
+</head>
+<body>
+    <div class="fh5co-loader"></div> 
+
+    <div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="num">Call: +7 777 777 77 77</p>
+						<ul class="fh5co-social">
+							<li><a href="https://t.me/Nietoo_bot"><i class="icon-telegram"></i></a></li>
+							<li><a href="#"><i class="icon-instagram"></i></a></li>
+							<li><a href="https://wa.me/+77072928239"><i class="icon-whatsapp"></i></a></li>
+						</ul>
+                        <a href="{{ url_for('index') }}">
+							<button class="animated-button">
+								<svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+									<path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+								</svg>
+								<span class="text">P R O F I L E</span>
+								<span class="circle"></span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+									<path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+								</svg>
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="url_for('.index')"><i class="icon-study"></i>Qaz Digital<span>.</span></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="{{ url_for('indexc') }}"><b>Home</b></a></li>
+							<li><a href="{{ url_for('courses') }}"><b>Courses</b></a></li>
+							<li><a href="{{ url_for('Quizz') }}"><b>Quizz</b></a></li>
+							<li><a href="{{ url_for('about') }}"><b>About</b></a></li>
+							
+							
+
+							<li><a href="{{ url_for('contact') }}"><b>Contact</b></a></li>
+			{% if login_button == 0 %}
+              <li class="has-dropdown">
+                <a href="#"><b>Manage</b></a>
+                <ul class="dropdown">
+                  <li><a href="{{ url_for('index') }}">Dashboared</a></li>
+                  <li><a href="{{ url_for('indexc') }}">Home</a></li>
+                  <li><a href="{{ url_for('EditProfile') }}">Profile</a></li>
+                  <li><a href="{{ url_for('logout') }}">logout</a></li>
+                </ul>
+              </li>
+              {% endif %}
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul class="slides">
+		   	<li style="background-image: url({{ url_for('static',filename='img/quizz.jpg')}});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>To earn the certificate, you must answer all questions correctly.</h1>
+									<h2>From the Qaz Digital</h2>
+									<p><a class="btn btn-primary btn-lg" href="{{ url_for('courses') }}">Start Learning Now!</a></p>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+                   <li style="background-image: url({{ url_for('static',filename='img/Quizz4.jpg')}});">
+                    <div class="overlay-gradient"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center slider-text">
+                                <div class="slider-text-inner">
+                                    <h1>To earn the certificate, you must answer all questions correctly.</h1>
+                                    <h2>From the Kazakhstan team</h2>
+                                     <p><a class="btn btn-primary btn-lg btn-learn" href="{{ url_for('courses') }}">Start Learning Now!</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+		   	</li>
+		   	<li style="background-image: url({{ url_for('static',filename='img/Quizz3.jpg')}});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>To earn the certificate, you must answer all questions correctly.</h1>
+			   					<h2>From the Qaz Digital</h2>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="{{ url_for('courses') }}">Start Learning Now!</a></p>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>		   	
+		  	</ul>
+	  	</div>
+	</aside>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            padding: 20px 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        select {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 15px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            max-width: 300px;
+        }
+        
+        .quiz-container {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .quiz-container h2 {
+            color: #34495e;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .question {
+            margin: 15px 0;
+        }
+
+        .question label {
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .correct-answer-section {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #eafaf1;
+            color: #2c3e50;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        .correct-answer-section span {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: 500;
+            color: #fff;
+            background-color: #d7dbd8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            text-align: center;
+            color: #34495e;
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        #certificate {
+            display: none;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #f1c40f;
+            color: #2c3e50;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        const answers = {
+            pythonQuiz: {
+                python1: { answer: "B", text: "A container to store data" },
+                python2: { answer: "C", text: "def" },
+                python3: { answer: "A", text: "10" },
+            },
+            cppQuiz: {
+                cpp1: { answer: "A", text: ">>" },
+                cpp2: { answer: "A", text: "To import namespaces" },
+                cpp3: { answer: "A", text: "int *ptr;" },
+            },
+            goQuiz: {
+                go1: { answer: "A", text: "var" },
+                go2: { answer: "A", text: "func myFunction() {}" },
+                go3: { answer: "B", text: "0" },
+            },
+			PMQuiz: {
+                cpp1: { answer: "C", text: "Defining product vision and strategy" },
+                cpp2: { answer: "D", text: "All of the above" },
+                cpp3: { answer: "B", text: "A product with only core features for initial testing" },
+            },
+			SaDQuiz: {
+                cpp1: { answer: "A", text: "Structured Query Language" },
+                cpp2: { answer: "A", text: "SELECT" },
+                cpp3: { answer: "B", text: "Combines rows from multiple tables" },
+            },
+        };
+
+        function showQuiz(selectedQuiz) {
+            // Hide all quizzes
+            const quizzes = document.querySelectorAll('.quiz-container');
+            quizzes.forEach(quiz => quiz.style.display = 'none');
+
+            // Show the selected quiz
+            const selectedQuizElement = document.getElementById(selectedQuiz);
+            if (selectedQuizElement) {
+                selectedQuizElement.style.display = 'block';
+            }
+
+            // Reset the result section and certificate
+            const resultDiv = document.getElementById('result');
+            const certificateDiv = document.getElementById('certificate');
+            resultDiv.style.display = 'none';
+            certificateDiv.style.display = 'none';
+            resultDiv.textContent = '';
+        }
+
+        function calculateResult(quizId) {
+            const correctAnswers = answers[quizId];
+            const quizContainer = document.getElementById(quizId);
+            const resultDiv = document.getElementById('result');
+            const certificateDiv = document.getElementById('certificate');
+            let score = 0;
+            let totalQuestions = 0;
+
+            // Get all questions in the selected quiz
+            const questions = quizContainer.querySelectorAll('.question');
+            let correctAnswerHTML = "<div class='correct-answer-section'><h3>Correct Answers:</h3>";
+
+            questions.forEach((question, index) => {
+                totalQuestions++;
+                const inputs = question.querySelectorAll('input[type="radio"]');
+                const questionKey = Object.keys(correctAnswers)[index];
+                const correctAnswer = correctAnswers[questionKey];
+                let userAnsweredCorrectly = false;
+
+                // Check user answers
+                inputs.forEach(input => {
+                    if (input.checked && input.value === correctAnswer.answer) {
+                        userAnsweredCorrectly = true;
+                        score++;
+                    }
+                });
+
+                // Append the correct answer to the result HTML
+                correctAnswerHTML += `<p>Question ${index + 1}: <span>${correctAnswer.answer}</span> - ${correctAnswer.text}</p>`;
+            });
+
+            correctAnswerHTML += "</div>";
+
+            // Display the result and correct answers
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `You scored ${score} out of ${totalQuestions}! ${correctAnswerHTML}`;
+
+            // Display certificate if the user answers all questions correctly
+            if (score === totalQuestions) {
+                certificateDiv.style.display = 'block';
+                certificateDiv.innerHTML = "<h2>Congratulations!</h2><p>You have completed the quiz with perfect score!</p><p>Click below to download your certificate.</p>";
+                
+                // Generate PDF Certificate
+                generatePDF();
+            }
+        }
+
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Title of the Certificate
+            doc.setFontSize(30);
+            doc.text('Certificate of Completion', 105, 40, null, null, 'center');
+            doc.setFontSize(20);
+            doc.text('This is to certify that you have successfully completed the quiz', 105, 60, null, null, 'center');
+            doc.text('with perfect score!', 105, 70, null, null, 'center');
+            doc.text('Date: ' + new Date().toLocaleDateString(), 105, 90, null, null, 'center');
+
+            // Signature and other certificate info
+            doc.setFontSize(16);
+            doc.text('Course Instructor:', 20, 130);
+            doc.text('From Qaz Digital Education Platform', 100, 130);
+
+            doc.text('Congratulations on your achievement!', 105, 150, null, null, 'center');
+
+            // Save the PDF file
+            doc.save('certificate.pdf');
+        }
+    </script>
+</head>
+<body>
+    <div id="fh5co-about">
+		<div class="container">
+			<div class="col-md-6 animate-box">
+				<h2>Benefits of Earning a Certificate from Qaz Digital Education Platform</h2>
+				<p>Obtaining a certificate from the Qaz Digital Education Platform offers several advantages. It serves as a recognition of your skills and knowledge in specific areas, enhancing your professional credibility. The certificate can boost your resume, making you more competitive in the job market. </p>
+				<p>Additionally, it demonstrates your commitment to self-development and continuous learning, which are highly valued by employers. The platform's reputation further adds to the certificate's value, potentially opening doors to new career opportunities and advancements.</p>
+			</div>
+			<div class="col-md-6">
+				<img style="width: 100%;" src="../static/img/Zhetistiq.jpg" alt="img">
+			</div>
+		</div>
+	</div>
+    <h1>Select a topic to start the quiz:</h1>
+    <p>To earn the certificate, you must answer all questions correctly.</p>
+    <!-- Quiz Selector -->
+    <select id="quizSelector" onchange="showQuiz(this.value)">
+        <option value="" disabled selected>Select a topic</option>
+        <option value="pythonQuiz">Python for Beginners</option>
+        <option value="cppQuiz">C++/C# Programming</option>
+        <option value="goQuiz">Go Programming</option>
+		<option value="PMQuiz">Product Manager</option>
+		<option value="SaDQuiz">SQL and Databases</option>
+    </select>
+
+    <!-- Python Quiz -->
+    <div class="quiz-container" id="pythonQuiz">
+        <h2>Quiz: Python for Beginners</h2>
+        <div class="question">
+            <label><strong>1. What is a variable in Python?</strong></label>
+            <input type="radio" name="python1" value="A"> A) A function to repeat code<br>
+            <input type="radio" name="python1" value="B"> B) A container to store data<br>
+            <input type="radio" name="python1" value="C"> C) A type of error message<br>
+            <input type="radio" name="python1" value="D"> D) A debugging tool<br>
+        </div>
+        <div class="question">
+            <label><strong>2. Which of the following is used to define a function in Python?</strong></label>
+            <input type="radio" name="python2" value="A"> A) function<br>
+            <input type="radio" name="python2" value="B"> B) func<br>
+            <input type="radio" name="python2" value="C"> C) def<br>
+            <input type="radio" name="python2" value="D"> D) define<br>
+        </div>
+        <div class="question">
+            <label><strong>3. What will the following code output: `print(2 + 3 * 2)`?</strong></label>
+            <input type="radio" name="python3" value="A"> A) 10<br>
+            <input type="radio" name="python3" value="B"> B) 12<br>
+            <input type="radio" name="python3" value="C"> C) 8<br>
+            <input type="radio" name="python3" value="D"> D) 7<br>
+        </div>
+        <button onclick="calculateResult('pythonQuiz')">Submit</button>
+    </div>
+
+    <div class="quiz-container" id="cppQuiz">
+        <h2>Quiz: C++/C# Programming</h2>
+        <div class="question">
+            <label><strong>1. In C++, which operator is used for input?</strong></label>
+            <input type="radio" name="cpp1" value="A"> A) >> <br>
+            <input type="radio" name="cpp1" value="B"> B) << <br>
+            <input type="radio" name="cpp1" value="C"> C) : <br>
+            <input type="radio" name="cpp1" value="D"> D) :: <br>
+        </div>
+        <div class="question">
+            <label><strong>2. What is the purpose of the `using` directive in C#?</strong></label>
+            <input type="radio" name="cpp2" value="A"> A) To import namespaces<br>
+            <input type="radio" name="cpp2" value="B"> B) To define a class<br>
+            <input type="radio" name="cpp2" value="C"> C) To create a loop<br>
+            <input type="radio" name="cpp2" value="D"> D) To declare a variable<br>
+        </div>
+        <div class="question">
+            <label><strong>3. In C++, what is the correct syntax to create a pointer?</strong></label>
+            <input type="radio" name="cpp3" value="A"> A) int *ptr;<br>
+            <input type="radio" name="cpp3" value="B"> B) int &ptr;<br>
+            <input type="radio" name="cpp3" value="C"> C) int ptr;<br>
+            <input type="radio" name="cpp3" value="D"> D) pointer int ptr;<br>
+        </div>
+        <button onclick="calculateResult('cppQuiz')">Submit</button>
+    </div>
+
+    <!-- Go Quiz -->
+    <div class="quiz-container" id="goQuiz">
+        <h2>Quiz: Go Programming</h2>
+        <div class="question">
+            <label><strong>1. What is the keyword used to declare a variable in Go?</strong></label>
+            <input type="radio" name="go1" value="A"> A) var<br>
+            <input type="radio" name="go1" value="B"> B) let<br>
+            <input type="radio" name="go1" value="C"> C) const<br>
+            <input type="radio" name="go1" value="D"> D) define<br>
+        </div>
+        <div class="question">
+            <label><strong>2. Which of the following is the correct way to write a function in Go?</strong></label>
+            <input type="radio" name="go2" value="A"> A) func myFunction() {}<br>
+            <input type="radio" name="go2" value="B"> B) function myFunction() {}<br>
+            <input type="radio" name="go2" value="C"> C) def myFunction():<br>
+            <input type="radio" name="go2" value="D"> D) fn myFunction()<br>
+        </div>
+        <div class="question">
+            <label><strong>3. In Go, what is the default value of an uninitialized integer variable?</strong></label>
+            <input type="radio" name="go3" value="A"> A) 1<br>
+            <input type="radio" name="go3" value="B"> B) 0<br>
+            <input type="radio" name="go3" value="C"> C) nil<br>
+            <input type="radio" name="go3" value="D"> D) null<br>
+        </div>
+        <button onclick="calculateResult('goQuiz')">Submit</button>
+    </div>
+	
+	
+	<div class="quiz-container" id="PMQuiz">
+		<h2>Quiz: Product Manager</h2>
+		<div class="question">
+			<label><strong>1. What is the primary responsibility of a Product Manager?</strong></label>
+			<input type="radio" name="pm1" value="A"> A) Writing code<br>
+			<input type="radio" name="pm1" value="B"> B) Managing marketing campaigns<br>
+			<input type="radio" name="pm1" value="C"> C) Defining product vision and strategy<br>
+			<input type="radio" name="pm1" value="D"> D) Managing finances<br>
+		</div>
+		<div class="question">
+			<label><strong>2. Which of the following is an important skill for a Product Manager?</strong></label>
+			<input type="radio" name="pm2" value="A"> A) Coding proficiency<br>
+			<input type="radio" name="pm2" value="B"> B) Communication and leadership<br>
+			<input type="radio" name="pm2" value="C"> C) Data analysis<br>
+			<input type="radio" name="pm2" value="D"> D) All of the above<br>
+		</div>
+		<div class="question">
+			<label><strong>3. What is a Minimum Viable Product (MVP)?</strong></label>
+			<input type="radio" name="pm3" value="A"> A) A fully finished product<br>
+			<input type="radio" name="pm3" value="B"> B) A product with only core features for initial testing<br>
+			<input type="radio" name="pm3" value="C"> C) A product without any user interface<br>
+			<input type="radio" name="pm3" value="D"> D) A marketing strategy<br>
+		</div>
+		<button onclick="calculateResult('PMQuiz')">Submit</button>
+	</div>
+
+	<div class="quiz-container" id="SaDQuiz">
+		<h2>Quiz: SQL and Databases</h2>
+		<div class="question">
+			<label><strong>1. What does SQL stand for?</strong></label>
+			<input type="radio" name="sql1" value="A"> A) Structured Query Language<br>
+			<input type="radio" name="sql1" value="B"> B) Simple Query Language<br>
+			<input type="radio" name="sql1" value="C"> C) Sequential Query Language<br>
+			<input type="radio" name="sql1" value="D"> D) None of the above<br>
+		</div>
+		<div class="question">
+			<label><strong>2. Which of the following SQL commands is used to retrieve data from a database?</strong></label>
+			<input type="radio" name="sql2" value="A"> A) SELECT<br>
+			<input type="radio" name="sql2" value="B"> B) INSERT<br>
+			<input type="radio" name="sql2" value="C"> C) UPDATE<br>
+			<input type="radio" name="sql2" value="D"> D) DELETE<br>
+		</div>
+		<div class="question">
+			<label><strong>3. What does the `JOIN` keyword do in SQL?</strong></label>
+			<input type="radio" name="sql3" value="A"> A) Combines columns from multiple tables<br>
+			<input type="radio" name="sql3" value="B"> B) Combines rows from multiple tables<br>
+			<input type="radio" name="sql3" value="C"> C) Combines data from one table<br>
+			<input type="radio" name="sql3" value="D"> D) Deletes data from multiple tables<br>
+		</div>
+		<button onclick="calculateResult('SaDQuiz')">Submit</button>
+	</div>	
+	
+    <!-- Result Section -->
+    <div id="result"></div>
+
+    <!-- Certificate Section -->
+    <div id="certificate"></div>
+</body>
+	
+	<footer id="fh5co-footer" role="contentinfo" style="background-color: #333333; color: #ffffff; padding: 20px 0;">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center" style="color: #ffffff; font-size: 16px;">
+					<p>
+						<small class="block" style="display: block; margin-bottom: 5px;">&copy; 2024 Qaz Digital.</small>
+						<small class="block" style="display: block; margin-bottom: 10px;">
+							Designed by <a href="{{ url_for('contact') }}" target="_blank" style="color: #ffffff; text-decoration: underline;">Kazakhstan Team</a>
+						</small>
+					</p>
+					<ul class="fh5co-social-icons" style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 10px;">
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-twitter"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-facebook"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-dribbble"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+        <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{ url_for('static',filename='js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static',filename='js/jquery.waypoints.min.js') }}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{ url_for('static',filename='js/jquery.stellar.min.js') }}"></script>
+	<!-- Carousel -->
+	<script src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"></script>
+	<!-- Flexslider -->
+	<script src="{{ url_for('static',filename='js/jquery.flexslider-min.js') }}"></script>
+	<!-- countTo -->
+	<script src="{{ url_for('static',filename='js/jquery.countTo.js') }}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/magnific-popup-options.js') }}"></script>
+	<!-- Count Down -->
+	<script src="{{ url_for('static',filename='js/simplyCountdown.js') }}"></script>
+	<!-- Main -->
+	<script src="{{ url_for('static',filename='js/main.js') }}"></script>

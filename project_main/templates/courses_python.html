@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Qaz Digital &mdash; About</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/flexslider.css') }}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/pricing.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static',filename='js/modernizr-2.6.2.min.js') }}"></script>
+	<style>
+		.animated-button {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			padding: 13px 30px;
+			border: 4px solid;
+			border-color: transparent;
+			font-size: 12px;
+			border-radius: 100px;
+			font-weight: 600;
+			color: rgba(0, 0, 0, 0.9);
+			box-shadow: 0 0 0 2px #ffffff;
+			cursor: pointer;
+			overflow: hidden;
+			transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+			margin: 6px 0 6px 10px;
+		}
+
+		.animated-button svg {
+			position: absolute;
+			width: 24px;
+			fill: rgba(0, 0, 0, 0.9);
+			z-index: 9;
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button .arr-1 {
+			right: 16px;
+		}
+
+		.animated-button .arr-2 {
+			left: -25%;
+		}
+
+		.animated-button .circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 20px;
+			background-color: #c5e5e4;
+			border-radius: 50%;
+			opacity: 0;
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button .text {
+			position: relative;
+			z-index: 1;
+			transform: translateX(-12px);
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button:hover {
+			box-shadow: 0 0 0 12px transparent;
+			color: rgba(0, 0, 0, 0.9);
+			border-radius: 12px;
+		}
+
+		.animated-button:hover .arr-1 {
+			right: -25%;
+		}
+
+		.animated-button:hover .arr-2 {
+			left: 16px;
+		}
+
+		.animated-button:hover .text {
+			transform: translateX(12px);
+		}
+
+		.animated-button:hover svg {
+			fill: rgba(0, 0, 0, 0.9);
+		}
+
+		.animated-button:active {
+			scale: 0.95;
+			box-shadow: 0 0 0 4px greenyellow;
+		}
+
+		.animated-button:hover .circle {
+			width: 220px;
+			height: 220px;
+			opacity: 1;
+		}
+		.col-xs-12.text-right {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 10px;
+		}
+
+		.fh5co-social {
+			display: flex;
+			gap: 10px;
+			margin: 0;
+			padding: 0;
+		}
+
+		.fh5co-social li {
+			list-style: none;
+		}
+
+		body {
+            font-family: Arial, sans-serif;
+        }
+
+        .player-container {
+            width: 100%;
+            text-align: center;
+        }
+        .main-video {
+            width: 80%;
+            height: 450px;
+            margin: 20px auto;
+        }
+
+		.video-wrap {
+			flex-wrap: wrap;
+		}
+
+		.video_block_subtitle {
+			display: flex;
+			flex-direction: column;
+			padding: 8px;
+		}
+
+		.video_block_subtitle span {
+			font-weight: 600;
+			font-size: 15px;
+		}
+
+		.video_block_more_lessons_list {
+			display: flex;
+			flex-direction: column;
+			background-color: white;
+			border: 1px solid #E5E5E5;
+			border-radius: 1rem;
+			overflow: hidden;
+		}
+
+		.video_block_more_lessons_item {
+			margin-left: 5px;
+			padding: 1.3rem;
+			border-bottom: 2px solid #E5E5E5;
+			color: black;
+			margin-top: 3px;
+			font-size: 15px;
+		}
+
+		.custom-play-button {
+            position: absolute;
+            top: 37%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 100px;
+            height: 100px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+		}
+
+		.custom-play-button::before {
+			content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 40px solid rgb(0, 0, 0);
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+			margin-left: 9px;
+		}
+
+        .hidden {
+            display: none;
+        }
+
+	</style>
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="num">Call: +7 707 292 7777</p>
+						<ul class="fh5co-social">
+							<li><a href="https://t.me/Nietoo_bot"><i class="icon-telegram"></i></a></li>
+							<li><a href="https://www.instagram.com/nuurjgt/"><i class="icon-instagram"></i></a></li>
+							<li><a href="https://wa.me/+77072928239"><i class="icon-whatsapp"></i></a></li>
+						</ul>
+						<a href="{{ url_for('index') }}">
+							<button class="animated-button">
+								<svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+									<path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+								</svg>
+								<span class="text">P R O F I L E</span>
+								<span class="circle"></span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+									<path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+								</svg>
+							</button>
+						</a>
+					</div>					
+				</div>
+			</div>
+		</div>
+		
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="index.html"><i class="icon-study"></i>Qaz Digital<span>.</span></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="{{ url_for('indexc') }}"><b>Home</b></a></li>
+							<li><a href="{{ url_for('courses') }}"><b>Courses</b></a></li>
+							<li><a href="{{ url_for('Quizz') }}"><b>Quizz</b></a></li>
+							<li class="active"><a href="{{ url_for('about') }}"><b>About</b></a></li>
+							
+							
+							<li><a href="{{ url_for('contact') }}"><b>Contact</b></a></li>
+							{% if login_button==1 %}
+							<li class="btn-cta"><a href="{{ url_for('login') }}"><span><b>Login</b></span></a>
+							</li>
+
+							{% endif %}
+							{% if role ==2 and role != 1 and role != 3%}
+							<li class="btn-cta"><a href="#"><span><b>Create a Course</b></span></a></li>
+							{% endif %}
+							{% if login_button == 0 %}
+							<li class="has-dropdown">
+								<a href="#"><b>Manage</b></a>
+								<ul class="dropdown">
+									<li><a href="{{ url_for('index') }}">Dashboared</a></li>
+									<li><a href="{{ url_for('indexc') }}">Home</a></li>
+									<li><a href="{{ url_for('EditProfile') }}">Profile</a></li>
+									<li><a href="{{ url_for('logout') }}">logout</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="{{ url_for('EditProfile') }}" class="account-icon">
+									<i class="icon-user"></i>
+									<span>{{ session['username'] }}</span> <!-- Отображение имени пользователя -->
+								</a>
+							</li>
+							{% endif %}
+							
+							
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h2>COURSE: LEARNING PYTHON: FULL COURSE</h2>
+		<div class="row video_block" style="margin-left:-15px; margin-right:-15px; display:flex">
+			<div class="video_block_main_video col-sm-12 col-md-12 col-lg-7 col-12" style="min-height: 500px;" id="main-video">
+				<iframe id="youtube-player" width="100%" height="370px" src="https://www.youtube.com/embed/_uQrJ0TkZlc?controls=1&autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<div class="video_block_subtitle">
+					<span>Lesson's Author: Mosh Hamedani</span>
+					<span>Source: QazDigital</span>
+					<span>Language: EN</span>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-5 col-12">
+				<div class="video_block_more_lessons">
+					<h4>NEXT LESSONS</h4>
+					<div class="video_block_more_lessons_list">
+                        <a href="#" class="video_block_more_lessons_item">1. Introduction to Python</a>
+                        <a href="#" class="video_block_more_lessons_item">2. Data Types and Variables</a>
+                        <a href="#" class="video_block_more_lessons_item">3. Control Flow and Loops</a>
+                        <a href="#" class="video_block_more_lessons_item">4. Functions and Modules</a>
+                        <a href="#" class="video_block_more_lessons_item">5. Working with Data Structures</a>
+                        <a href="#" class="video_block_more_lessons_item">6. Object-Oriented Programming (OOP)</a>                        
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+    <footer id="fh5co-footer" role="contentinfo" style="background-color: #333333; color: #ffffff; margin-top: 20px; padding: 20px 0 0 0;">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center" style="color: #ffffff; font-size: 16px;">
+					<p>
+						<small class="block" style="display: block; margin-bottom: 5px;">&copy; 2024 Innowacja.</small>
+						<small class="block" style="display: block; margin-bottom: 10px;">
+							Designed by <a href="#" target="_blank" style="color: #ffffff; text-decoration: underline;">Kazakhstan Team</a>
+						</small>
+					</p>
+					<ul class="fh5co-social-icons" style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 10px;">
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-twitter"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-facebook"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-dribbble"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/jquery.easing.1.3.js') }}"></scrip>
+	<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/jquery.waypoints.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/jquery.flexslider-min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+	<script>
+
+		function playVideo(videoId) {
+			const player = document.getElementById('youtube-player');
+			player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    	}
+	</script>
+	</body>
+</html>
+
+                                

@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Qaz Digital</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/flexslider.css') }}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/pricing.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static',filename='js/modernizr-2.6.2.min.js') }}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<style>
+		
+		.animated-button {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			padding: 13px 30px;
+			border: 4px solid;
+			border-color: transparent;
+			font-size: 12px;
+			border-radius: 100px;
+			font-weight: 600;
+			color: rgba(0, 0, 0, 0.9);
+			box-shadow: 0 0 0 2px #ffffff;
+			cursor: pointer;
+			overflow: hidden;
+			transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+			margin: 6px 0 6px 10px;
+		}
+
+		.animated-button svg {
+			position: absolute;
+			width: 24px;
+			fill: rgba(0, 0, 0, 0.9);
+			z-index: 9;
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button .arr-1 {
+			right: 16px;
+		}
+
+		.animated-button .arr-2 {
+			left: -25%;
+		}
+
+		.animated-button .circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 20px;
+			background-color: #c5e5e4;
+			border-radius: 50%;
+			opacity: 0;
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button .text {
+			position: relative;
+			z-index: 1;
+			transform: translateX(-12px);
+			transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.animated-button:hover {
+			box-shadow: 0 0 0 12px transparent;
+			color: rgba(0, 0, 0, 0.9);
+			border-radius: 12px;
+		}
+
+		.animated-button:hover .arr-1 {
+			right: -25%;
+		}
+
+		.animated-button:hover .arr-2 {
+			left: 16px;
+		}
+
+		.animated-button:hover .text {
+			transform: translateX(12px);
+		}
+
+		.animated-button:hover svg {
+			fill: rgba(0, 0, 0, 0.9);
+		}
+
+		.animated-button:active {
+			scale: 0.95;
+			box-shadow: 0 0 0 4px greenyellow;
+		}
+
+		.animated-button:hover .circle {
+			width: 220px;
+			height: 220px;
+			opacity: 1;
+		}
+		.col-xs-12.text-right {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 10px; 
+		}
+
+		.fh5co-social {
+			display: flex;
+			gap: 10px;
+			margin: 0;
+			padding: 0;
+		}
+
+		.fh5co-social li {
+			list-style: none;
+		}
+
+	</style>
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="num">Call: +7 777 777 7777</p>
+						<ul class="fh5co-social">
+							<li><a href="https://t.me/Nietoo_bot"><i class="icon-telegram"></i></a></li>
+							<li><a href="#"><i class="icon-instagram"></i></a></li>
+							<li><a href="https://wa.me/+77072928239"><i class="icon-whatsapp"></i></a></li>
+						</ul>
+						<a href="{{ url_for('index') }}">
+							<button class="animated-button">
+								<svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+									<path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+								</svg>
+								<span class="text">P R O F I L E</span>
+								<span class="circle"></span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+									<path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+								</svg>
+							</button>
+						</a>
+					</div>					
+				</div>
+			</div>
+		</div>
+		
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="index.html"><i class="icon-study"></i>Qaz Digital<span>.</span></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="{{ url_for('indexc') }}"><b>Home</b></a></li>
+							<li><a href="{{ url_for('courses') }}"><b>Courses</b></a></li>
+							<li><a href="{{ url_for('Quizz') }}"><b>Quizz</b></a></li>
+							<li class="active"><a href="{{ url_for('about') }}"><b>About</b></a></li>
+							
+							
+							<li><a href="{{ url_for('contact') }}"><b>Contact</b></a></li>
+							{% if login_button==1 %}
+							<li class="btn-cta"><a href="{{ url_for('login') }}"><span><b>Login</b></span></a>
+							</li>
+
+							{% endif %}
+							{% if role ==2 and role != 1 and role != 3%}
+							<li class="btn-cta"><a href="#"><span><b>Create a Course</b></span></a></li>
+							{% endif %}
+							{% if login_button == 0 %}
+							<li class="has-dropdown">
+								<a href="#"><b>Manage</b></a>
+								<ul class="dropdown">
+									<li><a href="{{ url_for('index') }}">Dashboared</a></li>
+									<li><a href="{{ url_for('indexc') }}">Home</a></li>
+									<li><a href="{{ url_for('EditProfile') }}">Profile</a></li>
+									<li><a href="{{ url_for('logout') }}">logout</a></li>
+								</ul>
+							</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	
+	
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul class="slides">
+		   	<li style="background-image: url({{ url_for('static',filename='img/img_bg_1.jpg')}});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
+									<h2>From the Kazakhstan team</h2>
+									<p><a class="btn btn-primary btn-lg" href="{{ url_for('courses') }}">Start Learning Now!</a></p>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url({{ url_for('static',filename='img/img_bg_2.jpg')}});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
+			   					<h2>From the Kazakhstan team</h2>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="{{ url_for('courses') }}">Start Learning Now!</a></p>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url({{ url_for('static',filename='img/img_bg_3.jpg')}});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
+			   					<h2>From the Kazakhstan team</h2>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="{{ url_for('courses') }}">Start Learning Now!</a></p>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>		   	
+		  	</ul>
+	  	</div>
+	</aside>
+
+	<div id="fh5co-course-categories">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>Course categories</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon animate-icon">
+							<i class="fas fa-shield-alt"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Information security systems</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon animate-icon">
+							<i class="fas fa-calculator"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Accounting</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon animate-icon">
+							<i class="fas fa-microscope"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Science &amp; Technology</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon animate-icon">
+							<i class="fas fa-code"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Web &amp; Programming</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="fh5co-counter" class="fh5co-counters" style="background-image: url(images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 text-center animate-box">
+							<span class="icon" style="color: white;"><i class="fas fa-lightbulb"></i></span>
+							<span class="fh5co-counter-label" style="margin: 0; margin-top: 20px; margin-bottom: 5px; color: white;">Innovative Learning</span>
+							<p style="color: white; margin: 0;">Unique methods tailored for individual growth and success.</p>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center animate-box">
+							<span class="icon" style="color: white;"><i class="fas fa-user-friends"></i></span>
+							<span class="fh5co-counter-label" style="margin: 0; margin-top: 20px; margin-bottom: 5px; color: white;">Community Building</span>
+							<p style="color: white;">Creating an active and supportive learning community.</p>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center animate-box">
+							<span class="icon" style="color: white;"><i class="fas fa-certificate"></i></span>
+							<span class="fh5co-counter-label" style="margin: 0; margin-top: 20px; margin-bottom: 5px; color: white;">Expert Certifications</span>
+							<p style="color: white;">Programs designed to enhance professional skills and careers.</p>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center animate-box">
+							<span class="icon" style="color: white;"><i class="fas fa-rocket"></i></span>
+							<span class="fh5co-counter-label" style="margin: 0; margin-top: 20px; margin-bottom: 5px; color: white;">Future Vision</span>
+							<p style="color: white;">Focused on building a better future through education and innovation.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="fh5co-course">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>Our Popular Courses</h2>
+				</div>
+			</div>
+			<div class="row courses-container" id="coursesContainer">
+				<div class="col-md-4 course" onclick="openCourseModal('https://www.youtube.com/embed/_uQrJ0TkZlc', 'Python for Beginners', 'Learn the basics of Python, including variables, loops, functions, and more.', 'test.html')">
+					<iframe style="border-radius: 12px; height: 178px;" class="video-preview" src="https://www.youtube.com/embed/_uQrJ0TkZlc" frameborder="0" allowfullscreen></iframe>
+					<h3 style="margin-top: 10px;">Course: Python for Beginners</h3>
+				</div>
+				<div class="col-md-4 course" onclick="openCourseModal('https://www.youtube.com/embed/gfkTfcpWqAY', 'C++/C# Programming', 'Master the basics of C++ and C# with hands-on examples and projects.', 'test.html')">
+					<iframe style="border-radius: 12px; height: 178px;" class="video-preview" src="https://www.youtube.com/embed/gfkTfcpWqAY" frameborder="0" allowfullscreen></iframe>
+					<h3 style="margin-top: 10px;">Course: C++/C# Programming</h3>
+				</div>
+				<div class="col-md-4 course" onclick="openCourseModal('https://www.youtube.com/embed/jFfo23yIWac', 'Go Programming', 'A comprehensive course on Go Programming Language.', 'test.html')">
+					<iframe style="border-radius: 12px; height: 178px;" class="video-preview" src="https://www.youtube.com/embed/jFfo23yIWac" frameborder="0" allowfullscreen></iframe>
+					<h3 style="margin-top: 10px;">Course: Go Programming</h3>
+				</div>
+				<div class="col-md-4 course" onclick="openCourseModal('https://www.youtube.com/embed/yUOC-Y0f5ZQ', 'Product Manager', 'Learn how to become a successful Product Manager in this course.', 'test.html')">
+					<iframe style="border-radius: 12px; height: 178px;" class="video-preview" src="https://www.youtube.com/embed/yUOC-Y0f5ZQ" frameborder="0" allowfullscreen></iframe>
+					<h3 style="margin-top: 10px;">Course: Product Manager</h3>
+				</div>
+				<div class="col-md-4 course" onclick="openCourseModal('https://www.youtube.com/embed/xiUTqnI6xk8', 'SQL and Databases', 'This course will introduce you to SQL and database management systems.', 'test.html')">
+					<iframe style="border-radius: 12px; height: 178px;" class="video-preview" src="https://www.youtube.com/embed/xiUTqnI6xk8" frameborder="0" allowfullscreen></iframe>
+					<h3 style="margin-top: 10px;">Course: SQL and Databases</h3>
+				</div>
+				<div class="col-md-4 course" onclick="openCourseModal('https://www.youtube.com/embed/lkIFF4maKMU?si=WZIJlyRWhFa7XMwM', 'SQL and Databases', 'This course will introduce you to SQL and database management systems.', 'test.html')">
+					<iframe style="border-radius: 12px; height: 178px;" class="video-preview" src="https://www.youtube.com/embed/lkIFF4maKMU?si=WZIJlyRWhFa7XMwM" frameborder="0" allowfullscreen></iframe>
+					<h3 style="margin-top: 10px;" >Course: JavaScript Concepts</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+			{% for i in all_courses %}
+			<div class="row">
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<img src="data:image/png;base64, {{i[3]}}" alt="Red dot" />
+						
+						<div class="desc">
+							<h3><a href="#">{{ i[1] }}</a></h3>
+							<p>{{ i[2] }}</p>
+							<p>{{i[4]}}</p>
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	
+
+	<div id="fh5co-blog" style="padding: 50px 0; background-color: #f4f4f4;">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2 style="font-size: 36px; font-weight: bold; color: #333;">Events</h2>
+				</div>
+			</div>
+			<div class="row row-padded-mb">
+				<!-- Event 1: Hack4Future Hackathon -->
+				<div class="col-md-4 animate-box" style="padding: 15px;">
+					<div class="fh5co-event" style="padding: 0; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; height: 300px;">
+						<h3 style="font-size: 22px; color: #333; margin-top: 15px; text-align: center;">
+							<a href="#" style="color: #007bff;">Hack4Future Hackathon</a>
+						</h3>
+						<p style="font-size: 16px; color: #777; padding: 10px 15px;">Join us for an exciting hackathon where devel-<br>opers come together to innovate and solve real-world problems. This year, we focus on sustain-<br>able tech solutions.</p>
+						<p style="text-align: center; font-size: 16px; color: #ff5733; font-weight: bold; margin-top: 52px;">Coming Soon</p>
+					</div>
+				</div>
+				<!-- Event 2: Tech Conference -->
+				<div class="col-md-4 animate-box" style="padding: 15px;">
+					<div class="fh5co-event" style="padding: 0; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; height: 300px;">
+						<h3 style="font-size: 22px; color: #333; margin-top: 15px; text-align: center;">
+							<a href="#" style="color: #28a745;">Tech Conference 2025</a>
+						</h3>
+						<p style="font-size: 16px; color: #777; padding: 10px 15px;">A global tech conference featuring speakers from top tech companies. Learn about the latest trends in AI, software development, and cyber-<br>security.</p>
+						<p style="text-align: center; font-size: 16px; color: #ff5733; font-weight: bold; margin-top: 52px;">Coming Soon</p>
+					</div>
+				</div>
+				<!-- Event 3: Web Development Bootcamp -->
+				<div class="col-md-4 animate-box" style="padding: 15px;">
+					<div class="fh5co-event" style="padding: 0; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; height: 300px;">
+						<h3 style="font-size: 22px; color: #333; margin-top: 15px; text-align: center;">
+							<a href="#" style="color: #ffc107;">Web Development Bootcamp</a>
+						</h3>
+						<p style="font-size: 16px; color: #777; padding: 10px 15px;">A comprehensive 4-week bootcamp where you’ll learn HTML, CSS, JavaScript, and more, building your own web projects from scratch.</p>
+						<p style="text-align: center; font-size: 16px; color: #ff5733; font-weight: bold; margin-top: 77px;">Coming Soon</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+	<footer id="fh5co-footer" role="contentinfo" style="background-color: #333333; color: #ffffff; padding: 20px 0;">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center" style="color: #ffffff; font-size: 16px;">
+					<p>
+						<small class="block" style="display: block; margin-bottom: 5px;">&copy; 2024 Qaz Digital.</small>
+						<small class="block" style="display: block; margin-bottom: 10px;">
+							Designed by <a href="{{ url_for('contact') }}" target="_blank" style="color: #ffffff; text-decoration: underline;">Kazakhstan Team</a>
+						</small>
+					</p>
+					<ul class="fh5co-social-icons" style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 10px;">
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-twitter"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-facebook"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#" style="color: #ffffff; font-size: 20px;"><i class="icon-dribbble"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{ url_for('static',filename='js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ url_for('static',filename='js/jquery.waypoints.min.js') }}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{ url_for('static',filename='js/jquery.stellar.min.js') }}"></script>
+	<!-- Carousel -->
+	<script src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"></script>
+	<!-- Flexslider -->
+	<script src="{{ url_for('static',filename='js/jquery.flexslider-min.js') }}"></script>
+	<!-- countTo -->
+	<script src="{{ url_for('static',filename='js/jquery.countTo.js') }}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/magnific-popup-options.js') }}"></script>
+	<!-- Count Down -->
+	<script src="{{ url_for('static',filename='js/simplyCountdown.js') }}"></script>
+	<!-- Main -->
+	<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+	<script>
+    var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
+
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
+	</script>
+	</body>
+</html>
+
